@@ -1,15 +1,16 @@
 package ru.kremenia.lesson_1.figure;
 
-public class Circle extends Figure{
+public class Circle extends Figure {
 
-    private Double radius;
+    private final Double radius;
 
     public Circle(Double radius) {
         this.radius = radius;
     }
 
     @Override
-    public Double areaFigure() {
-        return Math.PI * (radius * radius);
+    public void areaFigure() {
+        double x = Math.PI * (radius * radius);
+        System.out.println("Area of a circle: " + x);
     }
 }

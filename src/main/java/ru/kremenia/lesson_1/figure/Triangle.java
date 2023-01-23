@@ -2,8 +2,8 @@ package ru.kremenia.lesson_1.figure;
 
 public class Triangle extends Figure{
 
-    private Double h;
-    private Double length;
+    private final Double h;
+    private final Double length;
 
     public Triangle(Double h, Double length) {
         this.h = h;
@@ -11,7 +11,8 @@ public class Triangle extends Figure{
     }
 
     @Override
-    public Double areaFigure() {
-        return h * length / 2;
+    public void areaFigure() {
+        double x = h * length / 2;
+        System.out.println("Area of a triangle: " + x);
     }
 }
